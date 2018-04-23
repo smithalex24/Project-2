@@ -1,17 +1,35 @@
-<h1>SIGN UP PAGE</h1>
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Julius+Sans+One" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="/styles/main.css">
+</head>
+
+<body id = "signUpBody">
+	<div class = "container">
+		<div class = "row">
+			<div class="col-sm-8"><h1 id = "signUpHeader">Sign Up Page</h1></div>
+  		</div>
+  	</div>
 
 <form method = "POST" action = "/auth/signup">
+	<div class = "form-group">
+		<label>Name</label>
+		<input type = "text" name = "name" class = "form-control" placeholder = "What's your name?">
+	</div>
 	<div class = "form-group">
 		<label>Email</label>
 		<input type = "text" name = "email" class = "form-control" placeholder = "Email goes here">
 	</div>
 	<div class = "form-group">
 		<label>Password</label>
-		<input type = "password" name = "password" class = "form-control" placeholder = "Secret things go here">
-	</div>
-	<div class = "form-group">
-		<label>Name</label>
-		<input type = "text" name = "name" class = "form-control" placeholder = "What's your name?">
+		<input type = "password" name = "password" class = "form-control" placeholder = "Secret password goes here">
 	</div>
 	<input type = "submit" value = "Sign Up!" class = "btn btn-success">
 </form>
+
+</body>
+</html>

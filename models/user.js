@@ -37,3 +37,9 @@ userSchema.pre('save', function(next) {
 		next();
 	}
 });
+
+// mongoose.model(nameOfDBCollection, schema, optionalNameForce)
+//1. name: will lowercause and pluralize for DB
+//2. schema: what does a user look like in DB
+//3. forceName: (optional) force the name to something other than what #1 generates as collection name
+module.exports = mongoose.model('User', userSchema);

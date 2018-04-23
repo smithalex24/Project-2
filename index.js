@@ -14,7 +14,7 @@ var session = require('express-session');
 var app = express();
 
 // Connect to the database
-mongoose.connect('mongodb://localhost/authboiler');
+mongoose.connect('mongodb://localhost/Project2');
 
 // Set and use statements
 app.set('view engine', 'ejs');
@@ -28,6 +28,7 @@ app.use(session({
 app.use(flash());
 app.use(passport.initialize());
 app.use(passport.session());
+app.use(express.static('public'));
 
 // Just a convenience, but makes life easier...
 
@@ -48,6 +49,7 @@ app.get('/profile', isLoggedIn, function(req, res) {
 
 // Include any routes from controllers
 app.use('/auth', require('./controllers/auth'));
+app.use('/profile', require('./controllers/profile'));
 
 // Listen
 

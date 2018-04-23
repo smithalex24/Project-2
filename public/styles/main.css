@@ -1,0 +1,53 @@
+#homeBody {
+	background-image: url('/images/forest.jpg');
+	position: relative;
+	background-size: 100%;
+    background-size: cover;
+	background-position: center center;
+	margin: 0 auto;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	
+}
+#homeWelcome {
+	color: #42733D;
+	font-size: 80px;
+	font-family: 'Julius Sans One', sans-serif;
+}
+#homeWelcome:before{
+	content:"wa";
+	color: #28726E;
+	font-family: 'Julius Sans One', sans-serif;
+	font-size: 80px;
+	opacity: 2px;
+}
+#homeSubHeading {
+	font-family: 'Julius Sans One', sans-serif;
+	font-size: 15px;
+	color: ;
+}
+#logInButton {
+	background: #A48535;
+	border-color: #A48535;
+	font-family: 'Julius Sans One', sans-serif;
+}
+#signUpButton {
+	background: #6D5D4F;
+	border-color:#6D5D4F;
+	font-family: 'Julius Sans One', sans-serif;
+}
+#logOutButton {
+	background: #455031;
+	border-color: #455031;
+	font-family: 'Julius Sans One', sans-serif;
+}
+#homeButton {
+	background: #405D50;
+	border-color: #405D50;
+	font-family: 'Julius Sans One', sans-serif;
+}
+#signUpHeader {
+	font-family: 'Julius Sans One', sans-serif;
+	font-size: 50px;
+	color: #28726E;
+}
