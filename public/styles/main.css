@@ -20,10 +20,11 @@
 	font-family: 'Julius Sans One', sans-serif;
 	font-size: 80px;
 	opacity: 2px;
+	font-weight: bold;
 }
 #homeSubHeading {
 	font-family: 'Julius Sans One', sans-serif;
-	font-size: 15px;
+	font-size: 20px;
 	color: ;
 }
 #logInButton {
@@ -40,6 +41,7 @@
 	background: #455031;
 	border-color: #455031;
 	font-family: 'Julius Sans One', sans-serif;
+	color: white;
 }
 #homeButton {
 	background: #405D50;
@@ -49,7 +51,7 @@
 #signUpHeader {
 	font-family: 'Julius Sans One', sans-serif;
 	font-size: 50px;
-	color: #28726E;
+	color: #4D4C33;
 }
 #trailInfoHeader {
 	font-family: 'Julius Sans One', sans-serif;
@@ -60,8 +62,8 @@
 	text-align: center;
 }
 #map {
-	height: 50%;
-	width: 50%;
+	height: 80%;
+	width: 80%;
 
 }
 #profileHeader {
@@ -74,4 +76,29 @@
 	background: #8a773c;
 	border-color: #8a773c;
 	font-family: 'Julius Sans One', sans-serif;
+}
+
+body {
+	background: #608656;
+
+}
+#loginHeader {
+	font-size: 50px;
+	color: #4D4C33;
+	font-family: 'Julius Sans One', sans-serif;
+}
+label {
+	font-family: 'Julius Sans One', sans-serif;
+	font-weight: bold;
+}
+#logMeInButton {
+	font-family: 'Julius Sans One';
+	background: #9F572B;
+	border-color: #9F572B;
+}
+#signUpButton2 {
+	font-family: 'Julius Sans One';
+	background: #9F572B;
+	border-color: #9F572B;
+
 }
