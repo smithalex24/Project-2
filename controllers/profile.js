@@ -8,16 +8,20 @@ var router = express.Router();
 
 // Include the user model!
 var User = require('../models/user');
+var map;
+var infowindow;
 
-// Render the trails API 
-router.get('/api', function(req, res) {
-	request('https://www.hikingproject.com/data/get-trails?lat=47.7511&lon=-120.7401&maxDistance=200&key=200255070-17840d34440a3169dc12151505467053', function(error, response, body){
-		res.send(body);
-	})
-	
-});
-
-
+function initMap() {
+        var seattle = {lat: 47.604800, lng: 47.604800};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 11,
+          center: seattle
+        });
+        var marker = new google.maps.Marker({
+          position: seattle,
+          map: map
+        });
+      }
 
 
 
