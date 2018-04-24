@@ -1,17 +1,9 @@
 console.log('JS is working!');
 
-
-// Include express 
-var express = require('express');
-var request = require('request');
-var router = express.Router();
-
-// Include the user model!
-var User = require('../models/user');
 var map;
-var infowindow;
 
 function initMap() {
+  console.log('initializing map');
         var seattle = {lat: 47.604800, lng: 47.604800};
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 11,
@@ -21,9 +13,10 @@ function initMap() {
           position: seattle,
           map: map
         });
-      }
+        console.log(marker);
+      };
 
 
 
 
-module.exports = router;
+

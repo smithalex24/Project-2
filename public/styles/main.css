@@ -60,6 +60,18 @@
 	text-align: center;
 }
 #map {
-	height: 50%
+	height: 50%;
 	width: 50%;
+
+}
+#profileHeader {
+	font-size: 50px;
+	color: #28726E;
+	font-family: 'Julius Sans One', sans-serif;
+
+}
+#profileButton {
+	background: #8a773c;
+	border-color: #8a773c;
+	font-family: 'Julius Sans One', sans-serif;
 }

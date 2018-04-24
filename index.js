@@ -49,7 +49,7 @@ app.get('/profile', isLoggedIn, function(req, res) {
 
 // Include any routes from controllers
 app.use('/auth', require('./controllers/auth'));
-app.use('/profile', require('./controllers/profile'));
+
 
 // Listen
 
