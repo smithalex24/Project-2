@@ -1,21 +1,5 @@
 console.log('JS is working!');
 
-  
-
-// function initMap() {
-//   var seattle = {lat: 47.4957, lng: -122.335167};
-//   var map = new google.maps.Map(document.getElementById('map'), {
-//     zoom: 10,
-//     center: seattle
-//   });
-
-  // This example adds a search box to a map, using the Google Place Autocomplete
-// feature. People can enter geographical searches. The search box will return a
-// pick list containing a mix of places and predicted search terms.
-
-// This example requires the Places library. Include the libraries=places
-// parameter when you first load the API. For example:
-// <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
 
 function initMap() {
   var map = new google.maps.Map(document.getElementById('map'), {
@@ -40,8 +24,6 @@ function initMap() {
   // Listen for the event fired when the user selects a prediction and retrieve
   // more details for that place.
   searchBox.addListener('places_changed', function() {
-    console.log(input);
-    console.log(places);
     var places = searchBox.getPlaces();
 
     if (places.length == 0) {
@@ -89,7 +71,6 @@ function initMap() {
     map.fitBounds(bounds);
   });
 }
-
 //   var request = {
 //     location: seattle,
 //     radius: '500',

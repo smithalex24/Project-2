@@ -13,6 +13,9 @@
 	color: #42733D;
 	font-size: 80px;
 	font-family: 'Julius Sans One', sans-serif;
+	-webkit-animation-duration: 6s;
+  	-webkit-animation-delay: 0s;
+  	-webkit-animation-iteration-count: 1;
 }
 #homeWelcome:before{
 	content:"wa";
@@ -25,6 +28,9 @@
 #homeSubHeading {
 	font-family: 'Julius Sans One', sans-serif;
 	font-size: 20px;
+	-webkit-animation-duration: 5s;
+  	-webkit-animation-delay: 2s;
+  	-webkit-animation-iteration-count: 1;
 }
 #logInButton {
 	background: #A48535;
@@ -61,8 +67,8 @@
 	text-align: center;
 }
 #map {
-	height: 50%;
-	width: 70%;
+	height: 70%;
+	width: 80%;
 }
 #profileHeader {
 	font-size: 50px;
@@ -124,14 +130,7 @@ label {
   text-overflow: ellipsis;
   width: 400px;
 }
-/* Always set the map height explicitly to define the size of the div
- * element that contains the map. */
-/* Optional: Makes the sample page fill the window. */
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
+
 #description {
   font-family: Roboto;
   font-size: 15px;
@@ -175,9 +174,6 @@ html, body {
   font-family: 'Julius Sans One', sans-serif;
   font-size: 13px;
   font-weight: 300;
-}
-
-
 }
 
 #pac-input:focus {
