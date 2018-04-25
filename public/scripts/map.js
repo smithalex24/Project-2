@@ -1,99 +1,89 @@
 console.log('JS is working!');
+var $hikeList;
+var allHikes = [];
 
 
-function initMap() {
+function callback(results, status) {
+  if (status == google.maps.places.PlacesServiceStatus.OK) {
+    for (var i = 0; i < results.length; i++) {
+      var place = results[i];
+      // createMarker(results[i]);///still neeed to figure out putting the marker down
+      console.log(results[i]);
+    }
+  }
+}
+
+var getLocation =  function(address) {
+  var latitude, longitude;
+  var geocoder = new google.maps.Geocoder();
+  geocoder.geocode( { 'address': address}, function(results, status) {
+
+  if (status == google.maps.GeocoderStatus.OK) {
+      latitude = results[0].geometry.location.lat();
+      longitude = results[0].geometry.location.lng();
+      console.log(latitude, longitude);//this works
+    } 
+  }); 
+  return {lat:latitude, lon: longitude};
+}
+
+var test = getLocation("seattle");
+
+$(".search-hike").on("submit", function(e){//this function gets called when I press the button
+  e.preventDefault();                      //mostly working, just needs that damn lat long 
+  // console.log($("#hike-input").val());
+  var loc = $("#hike-input").val();
+  // var finalLoc = getLocation(loc);
+
+
+  var geocoder = new google.maps.Geocoder();
+  geocoder.geocode( { 'address': loc}, function(results, status) {
+
+  if (status == google.maps.GeocoderStatus.OK) {
+      var latitude = results[0].geometry.location.lat();
+      var longitude = results[0].geometry.location.lng();
+      // console.log(latitude, longitude);//this works
+      var request = {
+        location: {lat: latitude, lng: longitude},//the name I get from the input
+        radius: '50',
+        query: 'hike'
+      };
+
+
+      service = new google.maps.places.PlacesService(map);
+      service.textSearch(request, callback);
+        } 
+  }); 
+
   var map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: 47.4957, lng: -122.335167},
     zoom: 13,
     mapTypeId: 'roadmap',
   
   });
+})
 
-  // Create the search box and link it to the UI element.
-  var input = document.getElementById('pac-input');
-  var searchBox = new google.maps.places.SearchBox(input);
-  map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
-  console.log(input);
-
-  // Bias the SearchBox results towards current map's viewport.
-  map.addListener('bounds_changed', function() {
-    searchBox.setBounds(map.getBounds());
+function searchHikes(){
+// e.preventDefault();
+  // console.log(this);
+  var map = new google.maps.Map(document.getElementById('map'), {
+    center: {lat: 47.4957, lng: -122.335167},
+    zoom: 13,
+    mapTypeId: 'roadmap',
+  
   });
+  var request = {
+    location: {lat: 47.4957, lng: -122.335167},//the name I get from the input
+    radius: '500',
+    query: 'hike'
+  };
 
-  var markers = [];
-  // Listen for the event fired when the user selects a prediction and retrieve
-  // more details for that place.
-  searchBox.addListener('places_changed', function() {
-    var places = searchBox.getPlaces();
-
-    if (places.length == 0) {
-      return;
-    }
-
-    // Clear out the old markers.
-    markers.forEach(function(marker) {
-      marker.setMap(null);
-    });
-    markers = [];
-
-    // For each place, get the icon, name and location.
-    var bounds = new google.maps.LatLngBounds();
-    places.forEach(function(place) {
-      console.log(places);
-      
-      if (!place.geometry) {
-        console.log("Returned place contains no geometry");
-        return;
-      }
-      var icon = {
-        url: place.icon,
-        size: new google.maps.Size(71, 71),
-        origin: new google.maps.Point(0, 0),
-        anchor: new google.maps.Point(17, 34),
-        scaledSize: new google.maps.Size(25, 25)
-      };
-
-      // Create a marker for each place.
-      markers.push(new google.maps.Marker({
-        map: map,
-        icon: icon,
-        title: place.name,
-        position: place.geometry.location
-      }));
-
-      if (place.geometry.viewport) {
-        // Only geocodes have viewport.
-        bounds.union(place.geometry.viewport);
-      } else {
-        bounds.extend(place.geometry.location);
-      }
-    });
-    map.fitBounds(bounds);
-  });
+  service = new google.maps.places.PlacesService(map);
+  // console.log("####", service);
+  service.textSearch(request, callback);
+  // console.log(service);
 }
-//   var request = {
-//     location: seattle,
-//     radius: '500',
-//     query: 'hike'
-//   };
-
-//   service = new google.maps.places.PlacesService(map);
-//   service.textSearch(request, callback);
-
-// }
-
-
-// function callback(results, status) {
-//   if (status == google.maps.places.PlacesServiceStatus.OK) {
-//     for (var i = 0; i < results.length; i++) {
-//       var place = results[i];
-//       // createMarker(results[i]);///still neeed to figure out putting the marker down
-//       console.log(results[i]);
-//     }
-//   }
-// }
-
-
+// console.log(test);
 
 ///write new function that rerenders map with new data from form
 

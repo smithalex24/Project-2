@@ -1,4 +1,4 @@
-<body id = "profileBody">
+<!-- <body id = "profileBody"> --> 
 
 <h1 id = "profileHeader">Welcome!</h1>
 
@@ -16,12 +16,22 @@
     <option value="4">30 miles</option>
     <option value="5">50 miles</option>
   </select>
-  <button type="submit" class="btn btn-primary" id = "findTrailsButton" onsubmit="find()">Find Trails</button>
+  <button type="submit" class="btn btn-primary" id="findTrailsButton">Find Trails</button>
 </form>
  </footer> -->
 
-<input id="pac-input" class="controls" type="text" placeholder="Enter hiking and current city here">
-<div id="map" class="center-block" style="position:absolute"></div>
+  <form class="search-hike">
+    <input id="hike-input" type="text" name="location">
+    <input id ="searchClick" type="submit""></button>
+    <div id="map" class="center-block" style="position:absolute"></div>
+   
+  </form>
+  
+<div id = "hikeList" style="float:right"></div>
+
+
+
+<!-- <button onclick="searchHikes("seattle")">click me!</button> -->
 
 
 

@@ -14,9 +14,7 @@
 <body>
 	<div class = "container">
 		<% include partials/alerts %>
-		<%- body %> 	
-		<hr>
-		<footer>
+		<%- body %>
 		<div class = "row">
 			<div class = "col-12">
 				<a href = "/" class = "btn btn-info" id = "homeButton">Home</a>
@@ -29,8 +27,10 @@
 				<% } %>
 			</div>
 		</div>
+		
 	</div> 
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD0csLgRB6xo3EmOyQTh7rCxFcmLQGiYPM&libraries=places&callback=initMap"></script>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD0csLgRB6xo3EmOyQTh7rCxFcmLQGiYPM&libraries=places&callback=searchHikes"></script>
 
 
 
