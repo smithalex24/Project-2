@@ -1,0 +1,11 @@
+#homeWelcome {
+  -webkit-animation-duration: 6s;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-iteration-count: 1;
+}
+#homeSubHeading {
+  -webkit-animation-duration: 5s;
+  -webkit-animation-delay: 2s;
+  -webkit-animation-iteration-count: 1;
+
+}

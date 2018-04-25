@@ -6,13 +6,17 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Julius+Sans+One" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
 	<link rel="stylesheet" type="text/css" href="/styles/main.css">
+	<link rel="stylesheet" type="text/css" href="/styles/main.css">
+	<link rel="stylesheet" type="text/css" href="/styles/animation.css">
 </head>
 <body>
 	<div class = "container">
 		<% include partials/alerts %>
-		<%- body %> 
+		
 		<hr>
+		<footer>
 		<div class = "row">
 			<div class = "col-12">
 				<a href = "/" class = "btn btn-info" id = "homeButton">Home</a>
@@ -25,9 +29,16 @@
 				<% } %>
 			</div>
 		</div>
-	</div>
+	</div> 
+	<%- body %> 
 
-<script src="/scripts/map.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD0csLgRB6xo3EmOyQTh7rCxFcmLQGiYPM&libraries=places&callback=initMap"></script>
+
+
+
+
+<script src = "/scripts/map.js"></script>
+<script src = "/scripts/main.js"></script>
 
 </body>
 </html>
