@@ -10,20 +10,13 @@
 	
 }
 #homeWelcome {
-	color: #42733D;
+	color: #2D6649;
 	font-size: 80px;
 	font-family: 'Julius Sans One', sans-serif;
+	font-weight: 4px;
 	-webkit-animation-duration: 6s;
   	-webkit-animation-delay: 0s;
   	-webkit-animation-iteration-count: 1;
-}
-#homeWelcome:before{
-	content:"wa";
-	color: #28726E;
-	font-family: 'Julius Sans One', sans-serif;
-	font-size: 80px;
-	opacity: 2px;
-	font-weight: bold;
 }
 #homeSubHeading {
 	font-family: 'Julius Sans One', sans-serif;
@@ -67,14 +60,18 @@
 	text-align: center;
 }
 #map {
-	height: 70%;
-	width: 50%;
-	margin-top: 100px;
+	height: 60%;
+	width: 90%;
+	position: cover;
+	margin-bottom: 400px;
+	margin-left: 60px;
+	
 }
 #profileHeader {
 	font-size: 50px;
-	color: #28726E;
+	color: #4D4C33;
 	font-family: 'Julius Sans One', sans-serif;
+	font-weight:bold;
 
 }
 #profileButton {
@@ -85,7 +82,7 @@
 
 body {
 	background: #608656;
-	width: 100%;
+	width: 60%;
 
 }
 #loginHeader {
@@ -129,8 +126,10 @@ label {
 	border: 5px solid black;
 	background: white;
 	opacity: .5;
+	overflow: auto;
 
 }
+
 .navbar {
     background-color: none;
     overflow: hidden;
@@ -147,7 +146,10 @@ label {
     text-decoration: none;
     font-size: 17px;
 }
-
-
-
+.searchHike {
+	width: 100%
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
 

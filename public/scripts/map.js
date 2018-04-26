@@ -1,17 +1,24 @@
 console.log('JS is working!');
-var $hikeList;
-var allHikes = [];
+
+// Refreshing list on submit
 
 
+ 
+// Function to render search results and append specified result properties to results list
 function callback(results, status) {
   if (status == google.maps.places.PlacesServiceStatus.OK) {
     for (var i = 0; i < results.length; i++) {
       var place = results[i];
       // createMarker(results[i]);///still neeed to figure out putting the marker down
-      console.log(results[i]);
+      $('#hikeList').append('<p>').append('Name:'+ results[i].name + ' ' + 'Rating: ' + results[i].rating + 'Address: ' + results[i].formatted_address);
+      
     }
   }
 }
+
+
+
+ 
 
 var getLocation =  function(address) {
   var latitude, longitude;
@@ -83,6 +90,7 @@ function searchHikes(){
   service.textSearch(request, callback);
   // console.log(service);
 }
+
 // console.log(test);
 
 ///write new function that rerenders map with new data from form

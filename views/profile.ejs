@@ -1,6 +1,6 @@
 <!-- <body id = "profileBody"> --> 
 
-<h1 id = "profileHeader">Welcome!</h1>
+<h1 id = "profileHeader">Welcome - Let's find a hike!</h1>
 
 <!-- <footer>
 <form class="form-inline">
@@ -20,15 +20,34 @@
 </form>
  </footer> -->
 
-  <form class="search-hike">
-    <input id="hike-input" type="text" name="location">
-    <input id ="searchClick" type="submit""></button>
-    <div id="map" class="center-block" style="position:absolute"></div>
-   
-  </form>
-  
-<div id = "hikeList" style="float:right"></div>
+<div class = "container">
+  <div class = "row">
+    <div class = "col-sm-6">
+      <br>
+      <br>
+      <br>
+      <form class="search-hike">
+        <input id ="hike-input" type = "text" name = "location" placeholder = "Type your location here!">
+        <br>
+        <br>
+        <input id ="searchClick" type="submit" class = "btn btn-large"></button>
+        <button id = "refreshList" type = "submit" class = "btn btn-large" name = "refresh">Refresh List</button>
+      </form>
+      </div> 
+      <div class = "col-sm-6">
+        <br>
+        <br>
+        <div id = "hikeList"></div>
+      </div>
+    </div>
+  </div>
+<div id = "container">
+  <div class = "col-sm-12"
+  <div id="map" style = "position:absolute"></div>
+  </div>
+</div>
 
+  
 
 
 <!-- <button onclick="searchHikes("seattle")">click me!</button> -->
