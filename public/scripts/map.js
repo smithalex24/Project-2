@@ -1,7 +1,5 @@
 console.log('JS is working!');
 
-// Refreshing list on submit
-
 
  
 // Function to render search results and append specified result properties to results list
@@ -10,15 +8,16 @@ function callback(results, status) {
     for (var i = 0; i < results.length; i++) {
       var place = results[i];
       // createMarker(results[i]);///still neeed to figure out putting the marker down
-      $('#hikeList').append('<p>').append('Name:'+ results[i].name + ' ' + 'Rating: ' + results[i].rating + 'Address: ' + results[i].formatted_address);
+      $('#hikeList').append('<p>').append('Name: '+ results[i].name + ' ' +  'Rating: ' + results[i].rating + ' ' + 'Address: ' + results[i].formatted_address);
       
     }
   }
 }
 
-
-
- 
+$('#refreshList').click(function() {
+  $('#hikeList').empty();
+  $('#search-hike').remove();
+});
 
 var getLocation =  function(address) {
   var latitude, longitude;
@@ -34,7 +33,7 @@ var getLocation =  function(address) {
   return {lat:latitude, lon: longitude};
 }
 
-var test = getLocation("seattle");
+// var test = getLocation("seattle");
 
 $(".search-hike").on("submit", function(e){//this function gets called when I press the button
   e.preventDefault();                      //mostly working, just needs that damn lat long 

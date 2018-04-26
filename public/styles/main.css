@@ -46,15 +46,6 @@
 	border-color: #405D50;
 	font-family: 'Julius Sans One', sans-serif;
 }
-#signUpHeader {
-	font-family: 'Julius Sans One', sans-serif;
-	font-size: 50px;
-	color: #4D4C33;
-}
-#trailInfoHeader {
-	font-family: 'Julius Sans One', sans-serif;
-	font-size: 60px;
-}
 .container1 {
 	border: 5px solid #28726E ;
 	text-align: center;
@@ -67,7 +58,7 @@
 	margin-left: 60px;
 	
 }
-#profileHeader {
+#profileHeader, #trailInfoHeader, #signUpHeader, #loginHeader {
 	font-size: 50px;
 	color: #4D4C33;
 	font-family: 'Julius Sans One', sans-serif;
@@ -83,12 +74,6 @@
 body {
 	background: #608656;
 	width: 60%;
-
-}
-#loginHeader {
-	font-size: 50px;
-	color: #4D4C33;
-	font-family: 'Julius Sans One', sans-serif;
 }
 label {
 	font-family: 'Julius Sans One', sans-serif;
@@ -153,3 +138,8 @@ label {
     box-sizing: border-box;
 }
 
+#wishListButton {
+	font-family: 'Julius Sans One';
+	background: #9F572B;
+	border-color: #9F572B;
+}
