@@ -8,8 +8,17 @@ function callback(results, status) {
     for (var i = 0; i < results.length; i++) {
       var place = results[i];
       // createMarker(results[i]);///still neeed to figure out putting the marker down
-      $('#hikeList').append('<p>').append('Name: '+ results[i].name + ' ' +  'Rating: ' + results[i].rating + ' ' + 'Address: ' + results[i].formatted_address);
-      
+      // $('#hikeList').append('<p>').append('Name: '+ results[i].name + ' ' +  'Rating: ' + results[i].rating + ' ' + 'Address: ' + results[i].formatted_address);
+
+      $("#hikeList").append("<h3 class='hike-name'>"+results[i].name+"</h3>");
+      $("#hikeList").append("<h5 class='hike-name'>"+results[i].rating+"</h5>");
+      $("#hikeList").append("<h5 class='hike-name'>"+results[i].formatted_address+"</h5>");
+      $("#hikeList").append("<form method='POST' action='/wishlist'></form>")//inputs and submit button must be inside form element
+                    .append("<input type='hidden' value="+ results[i].name +">")
+                    .append("<input type='submit' class='sub-button'>")//above me add more inputs
+      $("#hikeList").append("<hr>"); 
+
+
     }
   }
 }

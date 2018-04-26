@@ -1,7 +1,7 @@
 var mongoose = require('mongoose'),
   Schema = mongoose.Schema;
 
-var wishList = new Schema({
+var wishListSchema = new Schema({
   name: String,
   location: String,
   rating: String
@@ -10,8 +10,6 @@ var wishList = new Schema({
 var Wishlist = mongoose.model('Wishlist', wishListSchema);
 
 
-
-module.exports = Wishlist;
 
 
 
