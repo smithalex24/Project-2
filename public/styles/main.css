@@ -51,11 +51,11 @@
 	text-align: center;
 }
 #map {
-	height: 60%;
-	width: 90%;
+	height: 100%;
+	width: 100%;
 	position: cover;
 	margin-bottom: 400px;
-	margin-left: 60px;
+
 	
 }
 #profileHeader, #trailInfoHeader, #signUpHeader, #loginHeader {
@@ -73,7 +73,7 @@
 
 body {
 	background: #608656;
-	width: 60%;
+
 }
 label {
 	font-family: 'Julius Sans One', sans-serif;
@@ -107,7 +107,7 @@ label {
 
 #hikeList {
 	height: 400px;
-	width: 500px;
+	width: 100%;
 	border: 5px solid black;
 	background: white;
 	opacity: .5;
@@ -131,11 +131,14 @@ label {
     text-decoration: none;
     font-size: 17px;
 }
-.searchHike {
-	width: 100%
+.search-hike {
+	width: 100%;
     padding: 12px 20px;
-    margin: 8px 0;
     box-sizing: border-box;
+    background: #30432b;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
 }
 
 #wishListButton {

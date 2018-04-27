@@ -47,9 +47,7 @@ app.get('/profile', isLoggedIn, function(req, res) {
 	res.render('profile');
 });
 
-app.get('/wishlist', isLoggedIn, function(req, res) {
-	res.render('wishlist');
-})
+
 
 // Include any routes from controllers
 app.use('/auth', require('./controllers/auth'));

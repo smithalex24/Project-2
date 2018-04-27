@@ -13,15 +13,21 @@ function callback(results, status) {
       $("#hikeList").append("<h3 class='hike-name'>"+results[i].name+"</h3>");
       $("#hikeList").append("<h5 class='hike-name'>"+results[i].rating+"</h5>");
       $("#hikeList").append("<h5 class='hike-name'>"+results[i].formatted_address+"</h5>");
-      $("#hikeList").append("<form method='POST' action='/wishlist'></form>")//inputs and submit button must be inside form element
-                    .append("<input type='hidden' value="+ results[i].name +">")
-                    .append("<input type='submit' class='sub-button'>")//above me add more inputs
+
+
+      $("#hikeList").append("<form method='POST' action='/wishlist' id='form" + i + "'" + "></form>");//inputs and submit button must be inside form element
+      $('#form'+i).append("<input type='hidden' name='name' value='"+ results[i].name +"'>");
+      $('#form'+i).append("<input type='hidden' name='rating' value='"+ results[i].rating +"'>");
+      $('#form'+i).append('<input type="hidden" name="location" value="'+ results[i].formatted_address +'">');
+      $('#form'+i).append("<input type='submit' class='sub-button'>")
+                    
       $("#hikeList").append("<hr>"); 
 
 
     }
   }
 }
+
 
 $('#refreshList').click(function() {
   $('#hikeList').empty();

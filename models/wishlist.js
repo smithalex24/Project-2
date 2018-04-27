@@ -4,11 +4,16 @@ var mongoose = require('mongoose'),
 var wishListSchema = new Schema({
   name: String,
   location: String,
-  rating: String
+  rating: String,
+  userId: {
+  	type: Schema.Types.ObjectId,
+  	ref: 'User',
+  	required: true
+  }
 });
 
 var Wishlist = mongoose.model('Wishlist', wishListSchema);
-
+module.exports = Wishlist
 
 
 

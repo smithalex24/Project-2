@@ -3,6 +3,12 @@ var mongoose = require(
 var bcrypt = require('bcrypt');
 
 //Define what a use looks like in the database
+var wishListSchema = new mongoose.Schema({
+  name: String,
+  location: String,
+  rating: String
+});
+
 var userSchema = new mongoose.Schema({
 	name: String,
 	email: {
@@ -13,7 +19,8 @@ var userSchema = new mongoose.Schema({
 	password: {
 		type: String,
 		required: true,
-	}
+	},
+	wishlist: [wishListSchema]
 });
 
 
