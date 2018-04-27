@@ -1,8 +1,12 @@
 console.log("Working!");
 
-$(document).ready(function() {
+$(document).ready(function(e) {
+
 	$("#homeWelcome").addClass('animated fadeIn');
 	$("#homeSubHeading").addClass('animated fadeIn');
+	$('#wishListHeader').addClass('animated fadeIn');
+	$('#profileSubHeader').addClass('animated fadeIn');
+	save();
 });
 
 $('.removeWish').click(function(e) {

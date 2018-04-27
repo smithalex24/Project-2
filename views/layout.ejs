@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>WAnder</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -13,32 +14,19 @@
 	<div class = "container">
 		<% include partials/alerts %>
 		<%- body %>
-		<!-- <div class = "row">
-			<div class = "col-12">
-				<a href = "/" class = "btn btn-info" id = "homeButton">Home</a>
-				<% if(!currentUser) {%>
-				<a href = "/auth/login" class = "btn btn-primary" id = "logInButton">Login</a>
-				<a href = "/auth/signup" class = "btn btn-success" id = "signUpButton">Sign Up</a>
-				<% } else { %>
-				<a href = "/auth/logout" class = "btn btn-warning" id = "logOutButton"><%=currentUser.name%>, Do you wanna log out?</a>
-				<a href = "/profile" class = "btn btn-danger" id = "profileButton">Profile</a>
-				<% } %>
-			</div>
-		</div> -->
-		
 	</div> 
 	
 
 	<% include partials/navbar %>
 
+
+
+
+
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD0csLgRB6xo3EmOyQTh7rCxFcmLQGiYPM&libraries=places&callback=searchHikes"></script>
-
-
-
 <script src = "/scripts/map.js"></script>
 <script src = "/scripts/main.js"></script>
-
 </body>
 </html>
 

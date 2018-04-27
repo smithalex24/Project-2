@@ -8,18 +8,17 @@ function callback(results, status) {
     for (var i = 0; i < results.length; i++) {
       var place = results[i];
       // createMarker(results[i]);///still neeed to figure out putting the marker down
-      // $('#hikeList').append('<p>').append('Name: '+ results[i].name + ' ' +  'Rating: ' + results[i].rating + ' ' + 'Address: ' + results[i].formatted_address);
 
-      $("#hikeList").append("<h3 class='hike-name'>"+results[i].name+"</h3>");
-      $("#hikeList").append("<h5 class='hike-name'>"+results[i].rating+"</h5>");
-      $("#hikeList").append("<h5 class='hike-name'>"+results[i].formatted_address+"</h5>");
+      $("#hikeList").append("<h3 class='hike-name'>"+ "Hike Name: " +results[i].name+"</h3>");
+      $("#hikeList").append("<h5 class='hike-name'>"+ "Rating: " +results[i].rating+"</h5>");
+      $("#hikeList").append("<h5 class='hike-name'>"+ "Address: " +results[i].formatted_address+"</h5>");
 
 
       $("#hikeList").append("<form method='POST' action='/wishlist' id='form" + i + "'" + "></form>");//inputs and submit button must be inside form element
       $('#form'+i).append("<input type='hidden' name='name' value='"+ results[i].name +"'>");
       $('#form'+i).append("<input type='hidden' name='rating' value='"+ results[i].rating +"'>");
       $('#form'+i).append('<input type="hidden" name="location" value="'+ results[i].formatted_address +'">');
-      $('#form'+i).append("<input type='submit' class='sub-button'>")
+      $('#form'+i).append("<input type='submit' value='Add to Wishlist' class='sub-button'>")
                     
       $("#hikeList").append("<hr>"); 
 
@@ -48,13 +47,12 @@ var getLocation =  function(address) {
   return {lat:latitude, lon: longitude};
 }
 
-// var test = getLocation("seattle");
+
 
 $(".search-hike").on("submit", function(e){//this function gets called when I press the button
-  e.preventDefault();                      //mostly working, just needs that damn lat long 
-  // console.log($("#hike-input").val());
+  e.preventDefault();                     
   var loc = $("#hike-input").val();
-  // var finalLoc = getLocation(loc);
+  
 
 
   var geocoder = new google.maps.Geocoder();
@@ -94,7 +92,7 @@ function searchHikes(){
   
   });
   var request = {
-    location: {lat: 47.4957, lng: -122.335167},//the name I get from the input
+    location: {},//the name I get from the input
     radius: '500',
     query: 'hike'
   };
@@ -104,6 +102,7 @@ function searchHikes(){
   service.textSearch(request, callback);
   // console.log(service);
 }
+
 
 // console.log(test);
 

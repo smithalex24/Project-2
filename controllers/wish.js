@@ -1,4 +1,4 @@
-var results;
+
 
 // Include express 
 var express = require('express');

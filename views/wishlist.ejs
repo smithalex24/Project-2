@@ -1,10 +1,21 @@
+<body id = "wishListBody"></body>
 <h1 id = "wishListHeader">My Wishlist</h1>
+<hr>
+<br>
+<br>
+<br>
 
 <% wishes.forEach(function(wish){%>
-	<div>
-		<h3><%=wish.name%></h3>
-		<h3><%=wish.location%></h3>
-		<h3><%=wish.rating%></h3>
-		<a href = "/wishlist/<%= wish._id %>" class = "removeWish">Remove</a>
+<div class = "container">
+	<div class = "row">
+		<div class = "col-sm-12">
+			<div id = "wishListForm">
+				<h3 id = "wishName">Hike Name: <%=wish.name%></h3>
+				<h4 id = "wishLocation">Address: <%=wish.location%></h4>
+				<h5 id = "wishRating">Rating :<%=wish.rating%></h5>
+				<a href = "/wishlist/<%= wish._id %>" class = "removeWish">Remove</a>
+			</div>
+		</div>
 	</div>
+</div>
 <%});%>
