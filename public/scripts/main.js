@@ -6,7 +6,7 @@ $(document).ready(function(e) {
 	$("#homeSubHeading").addClass('animated fadeIn');
 	$('#wishListHeader').addClass('animated fadeIn');
 	$('#profileSubHeader').addClass('animated fadeIn');
-	save();
+
 });
 
 $('.removeWish').click(function(e) {
