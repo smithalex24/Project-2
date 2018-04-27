@@ -78,6 +78,7 @@
 .body {
 	background: #626262;
 
+
 }
 label {
 	font-family: 'Julius Sans One', sans-serif;
@@ -140,7 +141,7 @@ label {
 	width: 100%;
     padding: 12px 20px;
     box-sizing: border-box;
-    background: #5E9071;
+    background: #455031;
     display: flex;
     justify-content: space-around;
     align-content: center;
@@ -161,6 +162,7 @@ label {
 	margin: 0 auto;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
+	padding-bottom: 100px;
 
 }
 #wishListHeader {

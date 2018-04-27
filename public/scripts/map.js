@@ -9,7 +9,7 @@ function callback(results, status) {
       var place = results[i];
       // createMarker(results[i]);///still neeed to figure out putting the marker down
 
-      $("#hikeList").append("<h3 class='hike-name'>"+ "Hike Name: " +results[i].name+"</h3>");
+      $("#hikeList").append("<h4 class='hike-name'>"+ "Hike Name: " +results[i].name+"</h4>");
       $("#hikeList").append("<h5 class='hike-name'>"+ "Rating: " +results[i].rating+"</h5>");
       $("#hikeList").append("<h5 class='hike-name'>"+ "Address: " +results[i].formatted_address+"</h5>");
 
