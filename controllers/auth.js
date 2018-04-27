@@ -14,7 +14,7 @@ router.get('/login', function(req, res) {
 // Perform the login functionality
 router.post('/login', passport.authenticate('local', {
 	successRedirect: '/profile',
-	successFlash: 'Good work, you logged in!',
+	successFlash: 'You have successfully logged in!',
 	failureRedirect: '/auth/login',
 	failureFlash: 'Invalid credentials'
 }));
@@ -63,7 +63,7 @@ router.post('/signup', function(req, res, next) {
 // Then it redirects to the home page
 router.get('/logout', function(req, res) {
 	req.logout();
-	req.flash('success', 'You are logged out. Bye-bye now');
+	req.flash('success', 'You are logged out. See you next time!');
 	res.redirect('/');
 });
 

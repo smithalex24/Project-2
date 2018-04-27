@@ -182,7 +182,7 @@ label {
 }
 .removeWish {
 	font-family: 'Julius Sans One', sans-serif;
-	color: black;
+	color: #A48535;
 	font-size: 20px;
 	font-weight: bold;
 }
@@ -198,7 +198,7 @@ h3, h4, h5 {
 	-webkit-animation-duration: 5s;
   	-webkit-animation-delay: 0s;
   	-webkit-animation-iteration-count: 1;
-  	color: #455031;
+  	color: #A48535;
   	font-weight: bold;
 
 }
