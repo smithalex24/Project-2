@@ -14,7 +14,7 @@ var session = require('express-session');
 var app = express();
 
 // Connect to the database
-mongoose.connect('mongodb://localhost/Project2');
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/Project2');
 
 // Set and use statements
 app.set('view engine', 'ejs');
