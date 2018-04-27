@@ -64,7 +64,7 @@
 }
 #profileHeader, #signUpHeader, #loginHeader, #wishListHeader {
 	font-size: 60px;
-	color: #B1ADA5;
+	color: white;
 	font-family: 'Julius Sans One', sans-serif;
 	
 
@@ -167,11 +167,12 @@ label {
 }
 #wishListHeader {
 	font-size: 70px;
-	color: #A0998D;
+	color: white;
 	font-family: 'Julius Sans One', sans-serif;
 	-webkit-animation-duration: 6s;
   	-webkit-animation-delay: 0s;
   	-webkit-animation-iteration-count: 1;
+  	text-align: center;
 
 }
 #wishListForm {
@@ -216,4 +217,7 @@ h3, h4, h5 {
 }
 .title {
 	font-weight: bold;
+}
+#password, #email, #name {
+	font-family: 'Julius Sans One', sans-serif;
 }
