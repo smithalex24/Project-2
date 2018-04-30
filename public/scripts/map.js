@@ -76,7 +76,7 @@ $(".search-hike").on("submit", function(e){//this function gets called when I pr
 
   var map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: 47.4957, lng: -122.335167},
-    zoom: 13,
+    zoom: 5,
     mapTypeId: 'roadmap',
   
   });
@@ -86,8 +86,8 @@ function searchHikes(){
 // e.preventDefault();
   // console.log(this);
   var map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: 47.4957, lng: -122.335167},
-    zoom: 13,
+    center: {lat: 0, lng: 0},
+    zoom: 5,
     mapTypeId: 'roadmap',
   
   });
