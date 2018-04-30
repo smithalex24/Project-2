@@ -155,7 +155,7 @@ label {
 	border-color: #9F572B;
 }
 #wishListBody {	
-	background-image: url('/images/conifer2.jpg');
+	background-image: url('/images/branch.jpg');
 	position: relative;
 	background-size: 100%;
     background-size: cover;
@@ -173,7 +173,9 @@ label {
 	-webkit-animation-duration: 6s;
   	-webkit-animation-delay: 0s;
   	-webkit-animation-iteration-count: 1;
-  	text-align: center;
+  	text-align: left;
+  	font-weight:bold;
+
 
 }
 #wishListForm {
