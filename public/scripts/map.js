@@ -30,7 +30,7 @@ function callback(results, status) {
 
 $('#refreshList').click(function() {
   $('#hikeList').empty();
-  $('#search-hike').remove();
+  $('#hike-input').val('');
 });
 
 var getLocation =  function(address) {
