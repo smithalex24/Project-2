@@ -167,14 +167,15 @@ label {
 
 }
 #wishListHeader {
-	font-size: 70px;
+	font-size: 65px;
 	color: white;
 	font-family: 'Julius Sans One', sans-serif;
 	-webkit-animation-duration: 6s;
   	-webkit-animation-delay: 0s;
   	-webkit-animation-iteration-count: 1;
   	text-align: left;
-  	font-weight:bold;
+  	margin-right: 80%;
+  	
 
 
 }
