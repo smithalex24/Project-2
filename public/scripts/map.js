@@ -86,14 +86,14 @@ function searchHikes(){
 // e.preventDefault();
   // console.log(this);
   var map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: 0, lng: 0},
+    center: {lat: 47.4957, lng: -122.335167},
     zoom: 5,
     mapTypeId: 'roadmap',
   
   });
   var request = {
-    location: {},//the name I get from the input
-    radius: '500',
+    location: {lat: 47.4957, lng: -122.335167},//the name I get from the input
+    radius: '50',
     query: 'hike'
   };
 

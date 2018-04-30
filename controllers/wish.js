@@ -27,6 +27,7 @@ router.get('/', isLoggedIn, function(req, res) {
 router.post('/', function(req, res, next){
 	// results = JSON.parse(req.body);
 	console.log(req.body);
+	console.log(req.user);
 	var favorite = req.body
 	favorite.userId = req.user.id
 	Wishlist.create(req.body, function(err, hike) {
