@@ -33,6 +33,7 @@ $('#refreshList').click(function() {
   $('#hike-input').val('');
 });
 
+// Converting lat/long to an address 
 var getLocation =  function(address) {
   var latitude, longitude;
   var geocoder = new google.maps.Geocoder();
@@ -92,7 +93,7 @@ function searchHikes(){
   
   });
   var request = {
-    location: {lat: 47.4957, lng: -122.335167},//the name I get from the input
+    location: {},//the name I get from the input
     radius: '50',
     query: 'hike'
   };
@@ -104,10 +105,4 @@ function searchHikes(){
 }
 
 
-// console.log(test);
 
-///write new function that rerenders map with new data from form
-
-  //1. Use geocoder API to take city & give you lat/long 
-  //2. Generate new map with map API with vals from step 1
-  //3. Do places search with new location + distance val
