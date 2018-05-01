@@ -47,7 +47,43 @@ If you find a hike that you want to save for the future, you can add it to your 
 8. Mongo + Mongoose
 9. Google Maps, Google Places and Google Geocode API - where the hiking data came from
 10. AJAX
+11. Auth/Bycrpt
 
+## Routes
+| CRUD          | Route             | Functionality                      |
+|:--------------|:------------------|:-----------------------------------|
+| GET           | /home             | Renders app homepage               |
+| POST          | /wishlist         | Post favored hike to Wishlist      |             |
+| DELETE        | /wishlist/:id     | Deletes hike from wishlist         |
+| GET           | /auth/login       | Renders login page                 |
+| POST          | /auth/login       | Authenticate login credentials     |
+| GET           | /auth/signup      | Renders signup page                |
+| POST          | /auth/signup      | User creation route                |
+| GET           | /auth/logout      | User logout route                  |
+| GET           | /profile          | Renders profile page               |
+| GET           | /wishlist         | Renders wishlist page              |
+
+## Models
+User Schema
+
+| Key           | Type         |
+|:--------------|:-------------|
+| name          | String       | 
+| email         | String       | 
+| password      | String       | 
+| wishlist      | wishListSchema |
+
+Wishlist Schema 
+
+| Key           | Type         |
+|:--------------|:-------------|
+| name          | String       | 
+| location      | String       | 
+| rating        | String       | 
+| userID  {
+| type          | Schema.Types.ObjectId |
+| ref           | "User"       |
+| required      | true         |
 
 ### Approach Taken
 
