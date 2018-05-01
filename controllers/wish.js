@@ -23,7 +23,7 @@ router.get('/', isLoggedIn, function(req, res) {
 	})
 	
 });
-
+// Save a favorite hike to User's page
 router.post('/', function(req, res, next){
 	// results = JSON.parse(req.body);
 	console.log(req.body);

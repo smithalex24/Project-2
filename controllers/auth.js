@@ -6,6 +6,11 @@ var router = express.Router();
 // Include the user model!
 var User = require('../models/user');
 
+// Render the home page
+router.get('/', function(req, res) {
+	res.render('/');
+})
+
 // Render the page with the login form
 router.get('/login', function(req, res) {
 	res.render('auth/login');
