@@ -52,7 +52,7 @@ If you find a hike that you want to save for the future, you can add it to your 
 ## Routes
 | CRUD          | Route             | Functionality                      |
 |:--------------|:------------------|:-----------------------------------|
-| GET           | /home             | Renders app homepage               |
+| GET           | /                 | Renders app homepage               |
 | POST          | /wishlist         | Post favored hike to Wishlist      |             |
 | DELETE        | /wishlist/:id     | Deletes hike from wishlist         |
 | GET           | /auth/login       | Renders login page                 |
